@@ -1,20 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FeaturedWork from "@/components/FeaturedWork";
+import TechStack from "@/components/TechStack";
 import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative">
       <Navbar />
       <Hero />
+      <FeaturedWork />
+      <TechStack />
       <About />
-      <Experience />
-      <Skills />
-      <Projects />
       <Contact />
     </main>
   );
