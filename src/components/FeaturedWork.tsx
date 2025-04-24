@@ -41,7 +41,7 @@ export default function FeaturedWork() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
   return (
-    <section id="featured-work" className="section-padding bg-background">
+    <section id="featured-work" className="section-padding bg-muted">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -82,9 +82,12 @@ export default function FeaturedWork() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="group relative bg-muted rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-background rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 shadow-lg"
+                style={{
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+                }}
               >
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
                 
                 <div className="relative">
                   <span className="text-4xl mb-4 block">{project.icon}</span>
